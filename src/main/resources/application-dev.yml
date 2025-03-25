@@ -1,0 +1,45 @@
+spring:
+  config:
+    activate:
+      on-profile: "dev"
+  datasource:
+    url: jdbc:mysql://localhost:3306/kanban
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      dialect=org:
+        hibernate:
+          dialect:
+            MySQL8Dialect
+      hibernate:
+        show_sql: true
+#  mail:
+#    host: ${EMAIL_HOST}
+#    password: ${EMAIL_PASSWORD}
+#    username: ${EMAIL_SENDER}
+#    port: ${EMAIL_PORT}
+#    properties:
+#      mail:
+#        transport:
+#          protocol: smtp
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+
+logging:
+  file:
+    name: log/unics-dev.log
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+server:
+  port: 6000
+  error:
+    include-message: always
