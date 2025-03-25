@@ -3,8 +3,8 @@ This is a RESTful API for a Kanban Task Manager that allows users to create task
 
 ## File Structure
 ```
-/dev/kanbantaskmanager/
-│-- src/main/java/com/onlinebanking/bank
+/kanban-task-manager/
+│-- src/main/java/dev/kanbantaskmanager
 │   ├── config/          # Configuration files (Thymeleaf, Logs configuration)
 │   ├── controllers/     # REST controllers
 │   ├── dtos/            # Data Transfer Objects (DTOs)
